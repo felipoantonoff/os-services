@@ -3,6 +3,10 @@
 ## Services v2
 
 ```log
+2.3.2 - 2026/10/21
+ci: exclude java from the install test matrix to stay under the 256-job limit (the catalog keeps the service)
+feat(python): make 3.13 the default catalog version
+
 2.3.1 - 2026/10/21
 fix: quote every numeric version in the manifests so the runtime never renders a truncated float
 
