@@ -3,6 +3,9 @@
 ## Services v2
 
 ```log
+2.3.3 - 2026/10/21
+feat(php): make 8.5 the default platform version (vhost template, server scripthandler and /usr/bin/php symlink)
+
 2.3.2 - 2026/10/21
 ci: exclude java from the install test matrix to stay under the 256-job limit (the catalog keeps the service)
 feat(python): make 3.13 the default catalog version

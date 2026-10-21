@@ -27,7 +27,7 @@ User installs php-webserver at any version from 5.6 to 8.5 (or `latest`/`legacy`
 
 1. `runtime/php-webserver/manifest.yml` — entry: passes `%version%`, `%primaryHostname%`, `%installableServiceAssetsDirPath%` to the install script; then chowns `/app/conf/php-webserver` and `/app/logs/php-webserver` and registers the two OS cron jobs
 2. `runtime/php-webserver/assets/install.sh` — `resolvePhpVersionChannel` maps the requested version to `latest` or `legacy`; `installModernPhpRuntimes` (OpenLiteSpeed + lsphp81–85 from repo.litespeed.sh) or `installLegacyPhpRuntimes` (Infinite apt repo with pinned GPG fingerprint + lsphp56/74/80); copies the matching httpd/vhost configs with hostname substitution
-3. `runtime/php-webserver/assets/httpd_config.conf`, `primary.conf` (+ `legacy-*` variants) — server and vhost templates serving 8080/8443, PHP handler bound to lsphp82 (modern) / lsphp74 (legacy)
+3. `runtime/php-webserver/assets/httpd_config.conf`, `primary.conf` (+ `legacy-*` variants) — server and vhost templates serving 8080/8443, PHP handler bound to lsphp85 (modern) / lsphp74 (legacy)
 4. `runtime/php-webserver/assets/install_test.sh` — verifies the version→channel mapping (run manually; no CI hook)
 5. Cron `AutoReloadPhpWebServerAfterHtaccessChange` (registered in step 1) — restarts the service when `.htaccess` files change under `/app/html`
 

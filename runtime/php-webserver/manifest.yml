@@ -32,7 +32,7 @@ installCmdSteps:
 uninstallCmdSteps:
   - /infinite/os cron delete -d "DailyLswsSwapCleanup"
   - /infinite/os cron delete -d "AutoReloadPhpWebServerAfterHtaccessChange"
-  - if [[ -L "/usr/bin/php" ]]; then phpTarget="$(readlink -f "/usr/bin/php" || true)"; case "$phpTarget" in /usr/local/lsws/lsphp74/*|/usr/local/lsws/lsphp82/*) unlink "/usr/bin/php" ;; esac; fi
+  - if [[ -L "/usr/bin/php" ]]; then phpTarget="$(readlink -f "/usr/bin/php" || true)"; case "$phpTarget" in /usr/local/lsws/lsphp74/*|/usr/local/lsws/lsphp82/*|/usr/local/lsws/lsphp85/*) unlink "/usr/bin/php" ;; esac; fi
   - packageList="$(dpkg-query -W -f='${binary:Package}\n' openlitespeed 'lsphp*' 2>/dev/null || true)"; if [[ -n "$packageList" ]]; then mapfile -t packageNames <<< "$packageList"; apt-get purge -y "${packageNames[@]}"; fi
 uninstallFilePaths:
   - /etc/apt/sources.list.d/infinite-apt.list

@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# @description  Install the php-webserver runtime. A PHP version (8.2 or 82)
+# @description  Install the php-webserver runtime. A PHP version (8.5 or 85)
 #               is mapped to the latest or legacy channel.
 # @usage        install.sh <version> <primary-hostname> <assets-dir-path>
 # @output       No standard output.
 # @requires     bash v4+, apt-get, awk, curl, gpg, sed, tr
 # @version      0.2.0
-# @updated      2026-09-04
+# @updated      2026-10-21
 
 set -euo pipefail
 
@@ -77,7 +77,7 @@ installModernPhpRuntimes() {
   done
   apt-get install -y lsphp85 lsphp85-common lsphp85-curl lsphp85-intl \
     lsphp85-mysql
-  ln -sf /usr/local/lsws/lsphp82/bin/php /usr/bin/php
+  ln -sf /usr/local/lsws/lsphp85/bin/php /usr/bin/php
   installServiceConfigAssets httpd_config.conf primary.conf \
     "$primaryHostname" "$assetsDirPath"
 }
