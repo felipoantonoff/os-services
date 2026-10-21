@@ -6,6 +6,7 @@ nature: solo
 type: database
 description: Redis is a source-available, in-memory storage, used as a distributed, in-memory key-value database, cache and message broker, with optional durability.
 versions:
+  - "8.10"
   - 7.2
   - 7.0
   - 6.2

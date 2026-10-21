@@ -3,6 +3,12 @@
 ## Services v2
 
 ```log
+2.3.0 - 2026/10/21
+feat(postgresql): add 18 as the default catalog version
+feat(redis): add 8.10 as the default catalog version
+feat(mariadb): add 13.0 as the default catalog version and drop the 10.6 EOL pin
+ci: read the fork catalog in the service test job
+
 2.2.1 - 2026/09/30
 fix(openssh): exempt the container own address, the default-route gateway when present and loopback from per-source penalties (Issue #82)
 

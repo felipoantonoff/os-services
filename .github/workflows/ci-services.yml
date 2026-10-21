@@ -194,6 +194,9 @@ jobs:
       fail-fast: false
       max-parallel: 4
     steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Get latest OS tag
         id: os-version
         run: |
@@ -235,6 +238,7 @@ jobs:
             --memory=4G \
             --env "PRIMARY_VHOST=goinfinite.local" \
             --env "LOG_LEVEL=debug" \
+            --volume "${GITHUB_WORKSPACE}:/infinite/services:ro" \
             "docker.io/${OS_IMAGE_REPOSITORY}:${OS_TAG}"
       - name: Wait for container readiness
         env:
