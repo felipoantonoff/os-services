@@ -68,7 +68,7 @@ User installs supabase-vector; it tails Infinite OS / Kong service logs, parses 
 
 ## Services CI (nightly install smoke test)
 
-Maintainers get a nightly GitHub Actions report: every catalog service/version is installed inside a real Infinite OS container and classified PASS / FAIL / SKIP.
+Maintainers get a nightly GitHub Actions report: catalog services/versions are installed inside a real Infinite OS container and classified PASS / FAIL / SKIP (java is discovered and reported as SKIP, but excluded from the install matrix by fork decision to respect the 256-job GitHub Actions limit).
 
 **Flow:**
 

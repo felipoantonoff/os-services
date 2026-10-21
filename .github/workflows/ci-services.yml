@@ -137,6 +137,15 @@ jobs:
 
                   seenNames.add(name)
 
+                  # Fork decision: java install tests alone overflow the 256-job matrix limit (issue #80).
+                  # The catalog keeps the service.
+                  if name == "java":
+                      recordSkippedItem(
+                          allItems, name, itemType, itemNature,
+                          "ExcludedFromCiMatrix",
+                      )
+                      continue
+
                   for versionValue in versions:
                       version = str(versionValue)
                       if not re.match(versionPattern, version):
