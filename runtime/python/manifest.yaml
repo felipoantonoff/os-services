@@ -7,16 +7,16 @@ nature: multi
 type: runtime
 description: Python is a high-level, interpreted programming language known for its readability and versatility. It supports multiple programming paradigms and is widely used in web development, data analysis, artificial intelligence, scientific computing, and more.
 versions:
-  - 2.7
-  - 3.5
-  - 3.6
-  - 3.7
-  - 3.8
-  - 3.9
-  - 3.10
-  - 3.11
-  - 3.12
-  - 3.13
+  - "2.7"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8"
+  - "3.9"
+  - "3.10"
+  - "3.11"
+  - "3.12"
+  - "3.13"
 portBindings:
   - 8000/http
 startupFile: /app/genericStartupFile.py

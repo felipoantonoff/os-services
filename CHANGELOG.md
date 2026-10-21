@@ -3,6 +3,9 @@
 ## Services v2
 
 ```log
+2.3.1 - 2026/10/21
+fix: quote every numeric version in the manifests so the runtime never renders a truncated float
+
 2.3.0 - 2026/10/21
 feat(postgresql): add 18 as the default catalog version
 feat(redis): add 8.10 as the default catalog version

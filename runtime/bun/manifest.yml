@@ -7,9 +7,9 @@ nature: multi
 type: runtime
 description: Bun is an all-in-one JavaScript runtime & toolkit designed for speed, complete with a bundler, test runner, and Node.js-compatible package manager. Bun aims for 100% Node.js compatibility.
 versions:
-  - 1.2
-  - 1.1
-  - 1.0
+  - "1.2"
+  - "1.1"
+  - "1.0"
 portBindings:
   - 3000/http
 startupFile: /app/html/index.tsx

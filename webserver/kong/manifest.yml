@@ -6,7 +6,7 @@ nature: solo
 type: webserver
 description: Kong Gateway is a high-performance API gateway that provides a unified interface for accessing and managing APIs.
 versions:
-  - 3.13
+  - "3.13"
 portBindings:
   - 8000/http
   - 8443/https

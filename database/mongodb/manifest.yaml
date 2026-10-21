@@ -7,7 +7,7 @@ nature: solo
 type: database
 description: MongoDB is a document-oriented NoSQL database used for high volume data storage.
 versions:
-  - 7.0
+  - "7.0"
 portBindings:
   - 27017/tcp
 startCmd: mongod --config /etc/mongod.conf

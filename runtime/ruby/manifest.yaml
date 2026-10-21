@@ -7,21 +7,21 @@ nature: multi
 type: runtime
 description: Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. Ruby is widely used for web development (notably with Ruby on Rails), scripting, DevOps tools, and automation.
 versions:
-  - 4.0
-  - 3.4
-  - 3.3
-  - 3.2
-  - 3.1
-  - 3.0
-  - 2.7
-  - 2.6
-  - 2.5
-  - 2.4
-  - 2.3
-  - 2.2
-  - 2.1
-  - 2.0
-  - 1.8
+  - "4.0"
+  - "3.4"
+  - "3.3"
+  - "3.2"
+  - "3.1"
+  - "3.0"
+  - "2.7"
+  - "2.6"
+  - "2.5"
+  - "2.4"
+  - "2.3"
+  - "2.2"
+  - "2.1"
+  - "2.0"
+  - "1.8"
 portBindings:
   - 3000/http
 startupFile: /app/genericStartupFile.rb
